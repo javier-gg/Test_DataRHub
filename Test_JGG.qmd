@@ -1,0 +1,22 @@
+---
+title: "Test_JGG"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Some text.
+
+```{r}
+x<-c(1, 2, 3, 4)
+x
+```
+
+
+
+
+
+
+
+
