@@ -1,0 +1,12 @@
+---
+title: "Test_R_data"
+format: html
+editor: visual
+---
+
+##Intro
+ some text
+```{r}
+x=1+1
+x
+```
