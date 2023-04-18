@@ -6,3 +6,47 @@ editor: visual
 ---
 
 ## Cargar una base de datos
+
+```{r carga_datos}
+data<-read.csv("inmigracion_extranjera.csv")
+head(data)
+```
+
+```{r}
+#| echo: false
+
+library(reticulate)
+```
+
+```{python carga_python}
+import pandas as pd
+
+data_python = pd.read_csv("inmigracion_extranjera.csv")
+data_python.head()
+```
+
+## Manipulation
+
+```{r}
+data$Country
+#data["Country"]
+```
+
+```{r}
+data$Continent[10]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
