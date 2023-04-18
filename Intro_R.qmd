@@ -47,6 +47,13 @@ data[5, 4]
 # This is the same as data$Country.ID[5]
 ```
 
+Suma de vectores.
+
+```{r}
+as.numeric(data$Population) + 3
+```
+
+
 ## Data types are important
 
 ```{r}
@@ -65,12 +72,10 @@ data$Population<-as.character(data$Population)
 
 ## Esta nueva modificación
 
+
 ```{r}
 str(data$Population)
 ```
-
-
-
 
 ## Esta será una nueva sección
 
