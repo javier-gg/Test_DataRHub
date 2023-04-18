@@ -65,6 +65,13 @@ data$Population<-as.character(data$Population)
 
 ## Esta nueva modificación
 
+```{r}
+str(data$Population)
+```
+
+
+
+
 ## Esta será una nueva sección
 
 
