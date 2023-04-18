@@ -36,7 +36,20 @@ data$Country
 data$Continent[10]
 ```
 
+## Data types are important
 
+```{r}
+class(data$Population)
+class(data$Continent)
+```
+
+```{r}
+str(data)
+```
+
+```{r}
+data$Population<-as.character(data$Population)
+```
 
 
 
