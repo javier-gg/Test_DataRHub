@@ -1,0 +1,8 @@
+---
+title: "Data manipulation in R"
+author: "Data RHub"
+format: html
+editor: visual
+---
+
+## Cargar una base de datos
