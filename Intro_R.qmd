@@ -36,17 +36,15 @@ data$Country
 data$Continent[10]
 ```
 
+```{r}
+# View Country.ID column
+data$Country.ID
+```
 
-
-
-
-
-
-
-
-
-
-
-
+```{r}
+# View entry 5 of Country.ID column
+data[5, 4]
+# This is the same as data$Country.ID[5]
+```
 
 
