@@ -53,7 +53,6 @@ Suma de vectores.
 as.numeric(data$Population) + 3
 ```
 
-
 ## Data types are important
 
 ```{r}
@@ -69,9 +68,7 @@ str(data)
 data$Population<-as.character(data$Population)
 ```
 
-
 ## Esta nueva modificación
-
 
 ```{r}
 str(data$Population)
@@ -79,12 +76,61 @@ str(data$Population)
 
 ## Esta será una nueva sección
 
+```{r}
 
+# Row 3 al 7
+data[3:7, c('Country', 'Population')]
 
+# Elimina el -n row
+data[-1, ]
 
+```
 
+```{r}
+data[c(TRUE, FALSE, TRUE)]
+```
 
+```{r}
+data[-c(1,2,3),]
+```
 
+## Filtros
 
+```{r}
+library(tidyverse)
 
+# Filtra
+data %>%
+  filter(Continent == 'África' | Continent == 'Ámerica del Sur')
+```
 
+```{r}
+
+library(moments)
+
+# Filtra
+data %>%
+  group_by(Continent) %>%
+  summarise(Mean_pop = mean(Population),
+            Median_pop = median(Population),
+            Var_pop = var(Population),
+            Std_pop = sd(Population),
+            Std_pop = sd(Population),
+            Min_pop = min(Population),
+            Max_pop = max(Population),
+            Q1 = quantile(Population, 0.25),
+            Q3 = quantile(Population, 0.75),
+            Skewness = skewness(Population),
+            Kurtosis = kurtosis(Population))
+```
+
+```{r}
+ggplot(data, aes(x = Population)) + geom_histogram(bins = 30, color = 'dodgerblue', fill = 'dodgerblue', alpha = 0.4) + theme_bw() + labs(x = 'Population', y = 'Frecuencia', title = 'Histograma Población') + theme(plot.title = element_text(hjust = 0.5, face = 'bold'))
+```
+
+```{r}
+usethis::use_git_config(
+  user.name = "manuelsolan-o",
+  user.email = "manuelhernandezs2003@gmail.com"
+)
+```
