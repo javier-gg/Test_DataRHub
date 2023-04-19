@@ -53,7 +53,6 @@ Suma de vectores.
 as.numeric(data$Population) + 3
 ```
 
-
 ## Data types are important
 
 ```{r}
@@ -69,9 +68,7 @@ str(data)
 data$Population<-as.character(data$Population)
 ```
 
-
 ## Esta nueva modificación
-
 
 ```{r}
 str(data$Population)
@@ -79,12 +76,25 @@ str(data$Population)
 
 ## Esta será una nueva sección
 
+```{r}
+install.packages('tidyverse')
+```
 
+```{r}
+library(tidyverse)
+```
+```{r}
+library(moments)
+```
 
-
-
-
-
-
+```{r}
+data
+```
+```{r}
+usethis::use_git_config(
+  user.name = "LeoCumpli21",
+  user.email = "cumplileo@gmail.com"
+)
+```
 
 
