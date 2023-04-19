@@ -137,13 +137,6 @@ addmargins(tabla, c(1, 2), sum)
 prop.table(tabla)
 ```
 
-```{r}
-usethis::use_git_config(
-  user.name = "javier-gg",
-  user.email = "javier.garridog@live.com"
-)
-```
-
 
 
 
