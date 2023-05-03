@@ -77,16 +77,12 @@ str(data$Population)
 ## Esta será una nueva sección
 
 ```{r}
-<<<<<<< HEAD
 # Row 3 al 7
 data[3:7, c('Country', 'Population')]
 
-=======
-<<<<<<< HEAD
 install.packages('tidyverse')
-=======
+
 data[3:7, c("Country", "Population")]
->>>>>>> 6ef1153d770187b203de757c53e411ae974ff00a
 ```
 
 ```{r}
@@ -200,3 +196,12 @@ usethis::use_git_config(
   user.email = "manuelhernandezs2003@gmail.com"
 )
 ```
+
+
+
+
+
+
+
+
+
