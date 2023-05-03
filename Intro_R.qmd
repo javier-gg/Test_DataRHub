@@ -77,7 +77,68 @@ str(data$Population)
 ## Esta será una nueva sección
 
 ```{r}
+<<<<<<< HEAD
 install.packages('tidyverse')
+=======
+data[3:7, c("Country", "Population")]
+```
+
+```{r}
+data[-1, ]
+```
+
+```{r}
+data[c(TRUE, FALSE, TRUE, TRUE, FALSE), ]
+```
+
+```{r}
+data[-c(1, 2, 3), ]
+```
+
+## Filtros
+
+```{r}
+library(tidyverse)
+
+data %>%
+  filter(Continent == "África" | Continent == "América del Sur")
+```
+
+
+```{r}
+library(moments)
+
+data %>%
+  group_by(Continent) %>%
+  summarise(Mean_pop = mean(Population),
+            Median_pop = median(Population),
+            Var_pop = var(Population),
+            Std_pop = sd(Population),
+            Min_pop = min(Population),
+            Max_pop = max(Population),
+            Q1 = quantile(Population, 0.25),
+            Q3 = quantile(Population, 0.75),
+            Skewness = skewness(Population),
+            Kurtosis = kurtosis(Population))
+```
+
+
+```{r}
+ggplot(data, aes(x = Population)) +
+  geom_histogram(color = "dodgerblue", fill = "dodgerblue", alpha = 0.4, stat = "density") +
+  geom_density() +
+  theme_bw() + labs(x = "Population", y = "Frecuencia", title = "Histograma población") +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+```
+
+```{r}
+x<-sample(c("Cat1", "Cat2"), size = 100, replace = TRUE)
+y<-sample(c("Fuma", "NoFuma"), size = 100, replace = TRUE)
+
+tabla<-table(x, y)
+addmargins(tabla, c(1, 2), sum)
+prop.table(tabla)
+>>>>>>> 9662119afc0042f8f8d9805d672ea37d6ecea5d6
 ```
 
 ```{r}
@@ -90,11 +151,6 @@ library(moments)
 ```{r}
 data
 ```
-```{r}
-usethis::use_git_config(
-  user.name = "LeoCumpli21",
-  user.email = "cumplileo@gmail.com"
-)
-```
+
 
 
